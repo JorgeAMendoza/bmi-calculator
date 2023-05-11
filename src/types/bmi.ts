@@ -10,8 +10,8 @@ export interface MetricInfo {
 
 export interface ImperialInfo {
   type: 'imperial';
-  ft: number;
-  in: number;
+  feet: number;
+  inches: number;
   stone: number;
   lb: number;
 }
