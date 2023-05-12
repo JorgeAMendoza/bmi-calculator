@@ -12,29 +12,29 @@ const calculateBMI = (info: BmiArgs): { bmi: string; message: string } => {
       return {
         ...results,
         message: `Your BMI suggests you're underweight. Your ideal weight is between ${idealMinWeight.toFixed(
-          2
-        )}kgs - ${idealMaxWeight.toFixed(2)}kgs.`,
+          1
+        )}kgs - ${idealMaxWeight.toFixed(1)}kgs.`,
       };
     } else if (bmi >= 18.5 && bmi <= 24.9) {
       return {
         ...results,
         message: `Your BMI suggests you're a healthy weight. Your ideal weight is between ${idealMinWeight.toFixed(
-          idealMinWeight
-        )}kgs - ${idealMaxWeight.toFixed(idealMaxWeight)}kgs.`,
+          1
+        )}kgs - ${idealMaxWeight.toFixed(1)}kgs.`,
       };
     } else if (bmi >= 25 && bmi <= 29.9) {
       return {
         ...results,
         message: `Your BMI suggets you're overweight. Your ideal weight is between ${idealMinWeight.toFixed(
-          idealMinWeight
-        )}kgs - ${idealMaxWeight.toFixed(idealMaxWeight)}kgs.`,
+          1
+        )}kgs - ${idealMaxWeight.toFixed(1)}kgs.`,
       };
     } else {
       return {
         ...results,
         message: `Your BMI suggets you're obese. Your ideal weight is between ${idealMinWeight.toFixed(
-          idealMinWeight
-        )}kgs - ${idealMaxWeight.toFixed(idealMaxWeight)}kgs.`,
+          1
+        )}kgs - ${idealMaxWeight.toFixed(1)}kgs.`,
       };
     }
   }
