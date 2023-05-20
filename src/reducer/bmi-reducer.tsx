@@ -1,12 +1,8 @@
 import { MetricInfo, ImperialInfo } from '../types/bmi';
+const digitRegex = /^\d{1,4}$/;
 
-interface Input {
-  value: number;
-  error: boolean;
-}
-
-type MetricInput = Record<keyof MetricInfo, Input>;
-type ImperialInput = Record<keyof ImperialInfo, Input>;
+type MetricInput = Record<keyof MetricInfo, string>;
+type ImperialInput = Record<keyof ImperialInfo, string>;
 type Inputs = MetricInput & ImperialInput;
 export type CalculatorState = {
   unit: 'metric' | 'imperial';
@@ -21,40 +17,46 @@ type InputAction = {
     | 'SET_INCHES'
     | 'SET_LB'
     | 'SET_STONE';
-  payload: number;
+  payload: string;
 };
 
 type UnitAction = { type: 'SET_UNIT'; payload: 'metric' | 'imperial' };
 
 type CalculateAction = { type: 'CALCULATE_BMI' };
 
-type Action = InputAction | UnitAction | CalculateAction;
+export type Action = InputAction | UnitAction | CalculateAction;
 
 const reducer = (state: CalculatorState, action: Action) => {
   switch (action.type) {
     case 'SET_CM':
-      return { ...state, cm: { value: action.payload, error: false } };
+      return { ...state, cm: action.payload };
     case 'SET_KG':
-      return { ...state, kg: { value: action.payload, error: false } };
+      return { ...state, kg: action.payload };
     case 'SET_FEET':
-      return { ...state, feet: { value: action.payload, error: false } };
+      return { ...state, feet: action.payload };
     case 'SET_INCHES':
-      return { ...state, inches: { value: action.payload, error: false } };
+      return { ...state, inches: action.payload };
     case 'SET_LB':
-      return { ...state, lb: { value: action.payload, error: false } };
+      return { ...state, lb: action.payload };
     case 'SET_STONE':
-      return { ...state, stone: { value: action.payload, error: false } };
+      return { ...state, stone: action.payload };
     case 'SET_UNIT':
       return { ...state, unit: action.payload };
     case 'CALCULATE_BMI': {
-      // grab unit
-      // if metric
-      // confirm that cm and kg are valid
-      // call calculate bmi
-      // set bmi
-      // return state with bmi updated
+      if (state.unit === 'metric') {
+        const { cm, kg } = state;
+        if (!cm || !kg) return state;
 
-      // repeat steps for imperial
+        if (!digitRegex.test(cm) || !digitRegex.test(kg)) return state;
+
+        console.log('calculate bmi');
+      }
+      // if metric, grab cm and kg
+      // if cm or kg are empty, just return;
+
+      // if cm or kg are invalid, return;
+
+      // else, calculate the bmi, and set bmi state to that.
       return state;
     }
     default:
