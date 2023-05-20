@@ -1,14 +1,28 @@
-// component that renders a form input
-// props are all attirbutes of a input element
+import { Action } from '../../reducer/bmi-reducer';
 
-const Input = () => {
+interface InputProps {
+  val: string;
+  dispatch: React.Dispatch<Action>;
+  action: Exclude<Action['type'], 'SET_UNIT' | 'CALCULATE_BMI'>;
+  testId: string;
+  name: string;
+}
+
+const Input = ({ val, dispatch, name, testId, action }: InputProps) => {
   return (
     <div>
-      <label htmlFor="name">Name</label>
-      <div>
-        <input type="text" id="name" name="name" />
-        <p>unit</p>
-      </div>
+      <label data-cy={testId}>
+        <input
+          type="text"
+          id={name}
+          name={name}
+          value={val}
+          onChange={(e) => dispatch({ type: action, payload: e.target.value })}
+          maxLength={4}
+          placeholder="0"
+        />
+        <p>{name}</p>
+      </label>
     </div>
   );
 };
