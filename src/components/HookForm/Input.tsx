@@ -18,7 +18,7 @@ const Input = ({ val, dispatch, name, testId, action }: InputProps) => {
           name={name}
           value={val}
           onChange={(e) => dispatch({ type: action, payload: e.target.value })}
-          maxLength={4}
+          maxLength={3}
           placeholder="0"
         />
         <p>{name}</p>
