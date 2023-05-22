@@ -7,7 +7,7 @@ type ImperialInput = Record<keyof ImperialInfo, string>;
 type Inputs = MetricInput & ImperialInput;
 export type CalculatorState = {
   unit: 'metric' | 'imperial';
-  bmiInfo: { bmi: number; message: string } | null;
+  bmiInfo: { bmi: string; message: string } | null;
 } & Omit<Inputs, 'type'>;
 
 type InputAction = {
@@ -27,7 +27,7 @@ type CalculateAction = { type: 'CALCULATE_BMI' };
 
 export type Action = InputAction | UnitAction | CalculateAction;
 
-const reducer = (state: CalculatorState, action: Action) => {
+const reducer = (state: CalculatorState, action: Action): CalculatorState => {
   switch (action.type) {
     case 'SET_CM':
       return { ...state, cm: action.payload };
@@ -59,13 +59,28 @@ const reducer = (state: CalculatorState, action: Action) => {
         const bmi = calculateBmi(info);
         return { ...state, bmiInfo: bmi };
       }
-      // if metric, grab cm and kg
-      // if cm or kg are empty, just return;
 
-      // if cm or kg are invalid, return;
+      const { feet, inches, lb, stone } = state;
+      if (!feet || !inches || !lb || !stone) return state;
 
-      // else, calculate the bmi, and set bmi state to that.
-      return state;
+      if (
+        !digitRegex.test(feet) ||
+        !digitRegex.test(inches) ||
+        !digitRegex.test(lb) ||
+        !digitRegex.test(stone)
+      )
+        return state;
+
+      const info: BmiArgs = {
+        type: 'imperial',
+        feet: parseInt(feet),
+        inches: parseInt(inches),
+        lb: parseInt(lb),
+        stone: parseInt(stone),
+      };
+
+      const bmi = calculateBmi(info);
+      return { ...state, bmiInfo: bmi };
     }
     default:
       return state;
