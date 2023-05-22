@@ -10,15 +10,16 @@ const initialState: CalculatorState = {
   inches: '',
   lb: '',
   stone: '',
-  bmi: null,
+  bmiInfo: null,
 };
 
 const BMICalculator = () => {
-  const [state, dispatch] = useReducer(BMIReducer, initialState);
+  const [{ cm, kg, feet, inches, lb, stone, unit, bmiInfo }, dispatch] =
+    useReducer(BMIReducer, { ...initialState });
 
   useEffect(() => {
     dispatch({ type: 'CALCULATE_BMI' });
-  }, [state]);
+  }, [cm, kg]);
   return (
     <div>
       <p>Enter your details below</p>
@@ -35,13 +36,13 @@ const BMICalculator = () => {
         </div>
 
         {/* for metric input */}
-        {state.unit === 'metric' ? (
+        {unit === 'metric' ? (
           <div>
             <p>metric form</p>
             {/* height */}
             <p>height</p>
             <Input
-              val={state.cm}
+              val={cm}
               dispatch={dispatch}
               action="SET_CM"
               testId="cmSelect"
@@ -50,7 +51,7 @@ const BMICalculator = () => {
             {/* weight */}
             <p>weight</p>
             <Input
-              val={state.kg}
+              val={kg}
               dispatch={dispatch}
               action="SET_KG"
               testId="kgSelect"
@@ -70,9 +71,8 @@ const BMICalculator = () => {
             {/* <Input /> */}
           </div>
         )}
-
-        {/* for imperial input */}
       </form>
+      <p>{bmiInfo !== null ? <>{bmiInfo.bmi}</> : 'no bmi'}</p>
     </div>
   );
 };
