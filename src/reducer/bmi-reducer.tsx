@@ -1,4 +1,5 @@
-import { MetricInfo, ImperialInfo } from '../types/bmi';
+import calculateBmi from '../lib/calculate-bmi';
+import { MetricInfo, ImperialInfo, BmiArgs } from '../types/bmi';
 const digitRegex = /^\d{1,4}$/;
 
 type MetricInput = Record<keyof MetricInfo, string>;
@@ -6,7 +7,7 @@ type ImperialInput = Record<keyof ImperialInfo, string>;
 type Inputs = MetricInput & ImperialInput;
 export type CalculatorState = {
   unit: 'metric' | 'imperial';
-  bmi: number | null;
+  bmiInfo: { bmi: number; message: string } | null;
 } & Omit<Inputs, 'type'>;
 
 type InputAction = {
@@ -49,7 +50,14 @@ const reducer = (state: CalculatorState, action: Action) => {
 
         if (!digitRegex.test(cm) || !digitRegex.test(kg)) return state;
 
-        console.log('calculate bmi');
+        const info: BmiArgs = {
+          type: 'metric',
+          cm: parseInt(cm),
+          kg: parseInt(kg),
+        };
+
+        const bmi = calculateBmi(info);
+        return { ...state, bmiInfo: bmi };
       }
       // if metric, grab cm and kg
       // if cm or kg are empty, just return;
