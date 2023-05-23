@@ -103,7 +103,25 @@ const BMICalculator = () => {
           </div>
         )}
       </form>
-      <p>{bmiInfo !== null ? <>{bmiInfo.bmi}</> : 'no bmi'}</p>
+      <div aria-live="polite">
+        {bmiInfo !== null ? (
+          <>
+            <p>
+              Your BMI is... <br />
+              {bmiInfo.bmi}
+            </p>
+            <p>{bmiInfo.message}</p>
+          </>
+        ) : (
+          <>
+            <p>Welcome</p>
+            <p>
+              Enter your height and weight and you&#39;ll see your BMI result
+              here
+            </p>
+          </>
+        )}
+      </div>
     </div>
   );
 };
