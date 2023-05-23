@@ -21,7 +21,7 @@ type InputAction = {
   payload: string;
 };
 
-type UnitAction = { type: 'SET_UNIT'; payload: 'metric' | 'imperial' };
+type UnitAction = { type: 'SET_UNIT' };
 
 type CalculateAction = { type: 'CALCULATE_BMI' };
 
@@ -29,6 +29,27 @@ export type Action = InputAction | UnitAction | CalculateAction;
 
 const reducer = (state: CalculatorState, action: Action): CalculatorState => {
   switch (action.type) {
+    case 'SET_UNIT': {
+      if (state.unit === 'metric') {
+        return {
+          ...state,
+          unit: 'imperial',
+          cm: '',
+          kg: '',
+          bmiInfo: null,
+        };
+      }
+
+      return {
+        ...state,
+        unit: 'metric',
+        feet: '',
+        inches: '',
+        lb: '',
+        stone: '',
+        bmiInfo: null,
+      };
+    }
     case 'SET_CM':
       return { ...state, cm: action.payload };
     case 'SET_KG':
@@ -41,8 +62,6 @@ const reducer = (state: CalculatorState, action: Action): CalculatorState => {
       return { ...state, lb: action.payload };
     case 'SET_STONE':
       return { ...state, stone: action.payload };
-    case 'SET_UNIT':
-      return { ...state, unit: action.payload };
     case 'CALCULATE_BMI': {
       if (state.unit === 'metric') {
         const { cm, kg } = state;
