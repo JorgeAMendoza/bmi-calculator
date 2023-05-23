@@ -20,7 +20,7 @@ const BMICalculator = () => {
 
   useEffect(() => {
     dispatch({ type: 'CALCULATE_BMI' });
-  }, [cm, kg]);
+  }, [cm, kg, feet, inches, lb, stone]);
   return (
     <div>
       <p>Enter your details below</p>
@@ -69,13 +69,37 @@ const BMICalculator = () => {
           <div>
             <p>imperial form</p>
             {/* height */}
-            {/* <Input /> */}
-            {/* <Input /> */}
+            <Input
+              val={feet}
+              dispatch={dispatch}
+              action="SET_FEET"
+              name="ft"
+              testId="ftSelect"
+            />
+            <Input
+              val={inches}
+              dispatch={dispatch}
+              action="SET_INCHES"
+              testId="inSelect"
+              name="in"
+            />
 
             {/* weight */}
 
-            {/* <Input /> */}
-            {/* <Input /> */}
+            <Input
+              val={stone}
+              dispatch={dispatch}
+              action="SET_STONE"
+              testId="stoneSelect"
+              name="st"
+            />
+            <Input
+              val={lb}
+              dispatch={dispatch}
+              action="SET_LB"
+              testId="lbSelect"
+              name="lb"
+            />
           </div>
         )}
       </form>
