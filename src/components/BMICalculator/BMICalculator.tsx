@@ -1,6 +1,7 @@
 import { useReducer, useEffect } from 'react';
 import Input from '../HookForm/Input';
 import BMIReducer, { CalculatorState } from '../../reducer/bmi-reducer';
+import RadioInput from '../HookForm/RadioInput';
 
 const initialState: CalculatorState = {
   unit: 'metric',
@@ -25,14 +26,20 @@ const BMICalculator = () => {
       <p>Enter your details below</p>
       <form>
         <div>
-          <label>
-            <input type="radio" id="metric" name="units" value="metric" />
-            Metric
-          </label>
-          <label>
-            <input type="radio" id="imperial" name="units" value="imperial" />
-            Imperial
-          </label>
+          <RadioInput
+            val={unit}
+            dispatch={dispatch}
+            action="SET_UNIT"
+            name="metric"
+            testId="metricSelect"
+          />
+          <RadioInput
+            val={unit}
+            dispatch={dispatch}
+            action="SET_UNIT"
+            name="imperial"
+            testId="imperialSelect"
+          />
         </div>
 
         {/* for metric input */}
