@@ -52,7 +52,7 @@ const BMICalculator = () => {
               val={cm}
               dispatch={dispatch}
               action="SET_CM"
-              testId="cmSelect"
+              testId="cmInput"
               name="cm"
             />
             {/* weight */}
@@ -61,7 +61,7 @@ const BMICalculator = () => {
               val={kg}
               dispatch={dispatch}
               action="SET_KG"
-              testId="kgSelect"
+              testId="kgInput"
               name="kg"
             />
           </div>
@@ -74,13 +74,13 @@ const BMICalculator = () => {
               dispatch={dispatch}
               action="SET_FEET"
               name="ft"
-              testId="ftSelect"
+              testId="ftInput"
             />
             <Input
               val={inches}
               dispatch={dispatch}
               action="SET_INCHES"
-              testId="inSelect"
+              testId="inInput"
               name="in"
             />
 
@@ -90,14 +90,14 @@ const BMICalculator = () => {
               val={stone}
               dispatch={dispatch}
               action="SET_STONE"
-              testId="stoneSelect"
+              testId="stInput"
               name="st"
             />
             <Input
               val={lb}
               dispatch={dispatch}
               action="SET_LB"
-              testId="lbSelect"
+              testId="lbInput"
               name="lb"
             />
           </div>
@@ -108,9 +108,9 @@ const BMICalculator = () => {
           <>
             <p>
               Your BMI is... <br />
-              {bmiInfo.bmi}
+              <span data-cy="bmiScore">{bmiInfo.bmi}</span>
             </p>
-            <p>{bmiInfo.message}</p>
+            <p data-cy="bmiResultText">{bmiInfo.message}</p>
           </>
         ) : (
           <>
