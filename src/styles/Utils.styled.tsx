@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: min(90%, 116rem);
+  width: min(87%, 116rem);
   margin: 0 auto;
 `;
 
 export const MainHeading = styled.h1`
   font-size: clamp(4.8rem, 5vw + 1rem, 6.4rem);
+  line-height: 1.1;
   font-weight: 600;
 `;
 
@@ -22,5 +23,5 @@ export const MediumHeading = styled.h3`
 
 export const SmallHeading = styled.h4`
   font-size: 2rem;
-  font-weight: 600;  
+  font-weight: 600;
 `;
