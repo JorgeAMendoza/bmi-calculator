@@ -1,4 +1,3 @@
-import './App.css';
 import bmiLogo from './assets/images/logo.svg';
 import BmiCalculator from './components/BMICalculator/BMICalculator';
 import manEatingPhoto from './assets/images/image-man-eating.webp';
