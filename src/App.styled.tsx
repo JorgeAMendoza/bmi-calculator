@@ -21,6 +21,10 @@ const Header = styled.header`
   & > *:not(:first-child) {
     margin-top: 2.4rem;
   }
+
+  & > *:last-child {
+    margin-top: 4.8rem;
+  }
 `;
 
 export default { App, Header, HeadingOne };
