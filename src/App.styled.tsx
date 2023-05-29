@@ -4,6 +4,7 @@ import { Container, MainHeading } from './styles/Utils.styled';
 const App = styled(Container)``;
 
 const HeadingOne = styled(MainHeading)`
+  --text-color: var(--gun-metal);
   text-align: center;
   letter-spacing: -0.05em;
 `;

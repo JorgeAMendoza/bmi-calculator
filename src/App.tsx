@@ -10,7 +10,6 @@ import muscleIcon from './assets/images/icon-muscle.svg';
 import pregnancyIcon from './assets/images/icon-pregnancy.svg';
 import raceIcon from './assets/images/icon-race.svg';
 import Styled from './App.styled';
-import { MainHeading } from './styles/Utils.styled';
 
 function App() {
   return (
