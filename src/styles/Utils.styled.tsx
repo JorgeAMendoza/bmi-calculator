@@ -9,6 +9,7 @@ export const MainHeading = styled.h1`
   font-size: clamp(4.8rem, 5vw + 1rem, 6.4rem);
   line-height: 1.1;
   font-weight: 600;
+  color: var(--text-color);
 `;
 
 export const LargeHeading = styled.h2`
