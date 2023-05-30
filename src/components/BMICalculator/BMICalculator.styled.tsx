@@ -6,7 +6,6 @@ const BMICalculator = styled.form`
   text-align: left;
 
   & > *:not(:last-child) {
-    border: 1px solid red;
     margin-bottom: 2.3rem;
   }
 `;
@@ -23,7 +22,6 @@ const Form = styled.form``;
 
 const UnitSelect = styled.div`
   display: flex;
-  border: 1px solid red;
 `;
 
 const FormInput = styled.div``;
@@ -43,9 +41,7 @@ const Result = styled.div`
   border-radius: 16px;
 `;
 
-const BMIResult = styled.div`
-    
-`;
+const BMIResult = styled.div``;
 
 const WelcomeMessage = styled.div`
   p {
@@ -69,5 +65,5 @@ export default {
   InputArea,
   Result,
   WelcomeMessage,
-  BMIResult
+  BMIResult,
 };
