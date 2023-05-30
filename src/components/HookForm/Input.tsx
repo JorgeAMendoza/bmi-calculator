@@ -1,4 +1,5 @@
 import { Action } from '../../reducer/bmi-reducer';
+import Styled from './Input.styled';
 
 interface InputProps {
   val: string;
@@ -10,9 +11,9 @@ interface InputProps {
 
 const Input = ({ val, dispatch, name, testId, action }: InputProps) => {
   return (
-    <div>
-      <label data-cy={testId}>
-        <input
+    <Styled.InputContainer>
+      <Styled.InputLabel data-cy={testId}>
+        <Styled.Input
           type="text"
           id={name}
           name={name}
@@ -22,8 +23,8 @@ const Input = ({ val, dispatch, name, testId, action }: InputProps) => {
           placeholder="0"
         />
         <p>{name}</p>
-      </label>
-    </div>
+      </Styled.InputLabel>
+    </Styled.InputContainer>
   );
 };
 
