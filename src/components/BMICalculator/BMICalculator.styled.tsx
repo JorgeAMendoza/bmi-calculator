@@ -22,6 +22,7 @@ const Form = styled.form``;
 
 const UnitSelect = styled.div`
   display: flex;
+  gap: 5.1rem;
 `;
 
 const FormInput = styled.div``;
