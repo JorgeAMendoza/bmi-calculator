@@ -32,8 +32,22 @@ const GlobalStyle = createGlobalStyle`
   body{
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
-    background-color: var(--white);
+    background: var(--white);
     color: var(--gun-metal);
+    position:relative;
+  }
+
+  body::after{
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 96vh;
+    height:96svh;
+    z-index: -2;
+    background: linear-gradient(270deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
+    border-radius: 0px 0px 35px 35px;
   }
   
   img, svg, picture, video {
