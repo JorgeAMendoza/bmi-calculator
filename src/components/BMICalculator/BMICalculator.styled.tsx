@@ -51,7 +51,19 @@ const Result = styled.div`
   border-radius: 16px;
 `;
 
-const BMIResult = styled.div``;
+const BMIResult = styled.div`
+  p > span {
+    font-size: 4.8rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+  p:last-of-type {
+    font-weight: 400;
+    border: 1px solid red;
+    font-size: 1.4rem;
+    padding-top: 1.2rem;
+  }
+`;
 
 const WelcomeMessage = styled.div`
   p {

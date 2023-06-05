@@ -122,13 +122,13 @@ const BMICalculator = () => {
 
       <Styled.Result aria-live="polite">
         {bmiInfo !== null ? (
-          <>
+          <Styled.BMIResult>
             <p>
               Your BMI is... <br />
               <span data-cy="bmiScore">{bmiInfo.bmi}</span>
             </p>
             <p data-cy="bmiResultText">{bmiInfo.message}</p>
-          </>
+          </Styled.BMIResult>
         ) : (
           <Styled.WelcomeMessage>
             <p>Welcome</p>
