@@ -45,10 +45,10 @@ const BMICalculator = () => {
 
       {/* for metric input */}
       {unit === 'metric' ? (
-        <div>
+        <Styled.FormInput>
           {/* height */}
           <div>
-            <p>height</p>
+            <Styled.InputTitle>height</Styled.InputTitle>
             <div>
               <Input
                 val={cm}
@@ -62,7 +62,7 @@ const BMICalculator = () => {
 
           {/* weight */}
           <div>
-            <p>weight</p>
+            <Styled.InputTitle>weight</Styled.InputTitle>
             <div>
               <Input
                 val={kg}
@@ -73,12 +73,12 @@ const BMICalculator = () => {
               />
             </div>
           </div>
-        </div>
+        </Styled.FormInput>
       ) : (
-        <div>
+        <Styled.FormInput>
           {/* height */}
           <div>
-            <p>height</p>
+            <Styled.InputTitle>height</Styled.InputTitle>
             <Styled.InputArea>
               <Input
                 val={feet}
@@ -99,7 +99,7 @@ const BMICalculator = () => {
 
           {/* weight */}
           <div>
-            <p>weight</p>
+            <Styled.InputTitle>weight</Styled.InputTitle>
             <Styled.InputArea>
               <Input
                 val={stone}
@@ -113,11 +113,11 @@ const BMICalculator = () => {
                 dispatch={dispatch}
                 action="SET_LB"
                 testId="lbInput"
-                name="lb"
+                name="lbs"
               />
             </Styled.InputArea>
           </div>
-        </div>
+        </Styled.FormInput>
       )}
 
       <Styled.Result aria-live="polite">

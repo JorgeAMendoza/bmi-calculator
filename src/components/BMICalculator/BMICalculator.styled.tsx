@@ -15,21 +15,30 @@ const CalculatorTitle = styled.h2`
   color: var(--gun-metal);
   font-weight: 600;
   letter-spacing: -0.05em;
-  word-spacing: -0.1em;
 `;
-
-const Form = styled.form``;
 
 const UnitSelect = styled.div`
   display: flex;
   gap: 5.1rem;
 `;
 
-const FormInput = styled.div``;
+const InputTitle = styled.p`
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+`;
+
+const FormInput = styled.div`
+  margin-block-start: 2.9rem;
+
+  & > *:not(:last-child) {
+    margin-block-end: 1.5rem;
+  }
+`;
 
 const InputArea = styled.div`
   display: flex;
-
+  gap: 1.6rem;
   & > * {
     flex-grow: 1;
   }
@@ -60,11 +69,11 @@ const WelcomeMessage = styled.div`
 export default {
   BMICalculator,
   CalculatorTitle,
-  Form,
   UnitSelect,
   FormInput,
   InputArea,
   Result,
   WelcomeMessage,
   BMIResult,
+  InputTitle,
 };
