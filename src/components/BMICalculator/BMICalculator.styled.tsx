@@ -4,6 +4,7 @@ const BMICalculator = styled.form`
   border-radius: 16px;
   padding: 1.3em 1.4em;
   text-align: left;
+  background-color: var(--white);
 
   & > *:not(:last-child) {
     margin-bottom: 2.3rem;
