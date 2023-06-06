@@ -10,25 +10,28 @@ import muscleIcon from './assets/images/icon-muscle.svg';
 import pregnancyIcon from './assets/images/icon-pregnancy.svg';
 import raceIcon from './assets/images/icon-race.svg';
 import Styled from './App.styled';
+import { Container } from './styles/Utils.styled';
 
 function App() {
   return (
     <Styled.App>
-      <Styled.Header>
-        <div>
-          <img src={bmiLogo} alt="BMI Calculator Logo" />
-        </div>
+      <Container>
+        <Styled.Header>
+          <div>
+            <img src={bmiLogo} alt="BMI Calculator Logo" />
+          </div>
 
-        <Styled.HeadingOne>Body Mass Index Calculator</Styled.HeadingOne>
-        <p>
-          Better understand your weight in relation to your height using our
-          body mass index (BM) calculator. While BMI is not the sole determinant
-          of a healthy weight, it offers a valuable starting point to evaluate
-          your overall health and well-being.
-        </p>
+          <Styled.HeadingOne>Body Mass Index Calculator</Styled.HeadingOne>
+          <p>
+            Better understand your weight in relation to your height using our
+            body mass index (BM) calculator. While BMI is not the sole
+            determinant of a healthy weight, it offers a valuable starting point
+            to evaluate your overall health and well-being.
+          </p>
 
-        <BmiCalculator />
-      </Styled.Header>
+          <BmiCalculator />
+        </Styled.Header>
+      </Container>
 
       <main>
         <section>

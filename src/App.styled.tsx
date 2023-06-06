@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Container, MainHeading } from './styles/Utils.styled';
+import { MainHeading } from './styles/Utils.styled';
 
-const App = styled(Container)``;
+const App = styled.div``;
 
 const HeadingOne = styled(MainHeading)`
   --text-color: var(--gun-metal);
