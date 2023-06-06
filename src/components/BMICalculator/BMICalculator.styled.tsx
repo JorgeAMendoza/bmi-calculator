@@ -60,7 +60,6 @@ const BMIResult = styled.div`
   }
   p:last-of-type {
     font-weight: 400;
-    border: 1px solid red;
     font-size: 1.4rem;
     padding-top: 1.2rem;
   }
