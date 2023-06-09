@@ -10,7 +10,7 @@ import muscleIcon from './assets/images/icon-muscle.svg';
 import pregnancyIcon from './assets/images/icon-pregnancy.svg';
 import raceIcon from './assets/images/icon-race.svg';
 import Styled from './App.styled';
-import { Container } from './styles/Utils.styled';
+import { Container, LargeHeading } from './styles/Utils.styled';
 
 function App() {
   return (
@@ -33,14 +33,14 @@ function App() {
         </Styled.Header>
       </Container>
 
-      <main>
+      <Styled.MainContent>
         <section>
-          <div>
+          <Styled.AboutResults>
             <div>
               <img src={manEatingPhoto} alt="phot of man eating food" />
             </div>
-            <div>
-              <h2>What your BMI result means</h2>
+            <Container>
+              <LargeHeading>What your BMI result means</LargeHeading>
               <p>
                 A BMI range of 18.5 to 24.9 is considered a &#39;healthy
                 weight.&#39; Maintaining a healthy weight may lower your chances
@@ -50,8 +50,8 @@ function App() {
                 Additionally, strive for regular physical activity, ideally
                 about 30 minutes daily for five days a week.
               </p>
-            </div>
-          </div>
+            </Container>
+          </Styled.AboutResults>
 
           <ul>
             <li>
@@ -166,7 +166,7 @@ function App() {
             </p>
           </div>
         </section>
-      </main>
+      </Styled.MainContent>
     </Styled.App>
   );
 }
