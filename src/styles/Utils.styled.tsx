@@ -18,11 +18,16 @@ export const LargeHeading = styled.h2`
 `;
 
 export const MediumHeading = styled.h3`
-  font-size: clamp(2.4rem, 5vw + 1rem, 3.2rem);
+  font-size: clamp(2.4rem, 3.5vw + 1rem, 3.2rem);
   font-weight: 600;
 `;
 
 export const SmallHeading = styled.h4`
   font-size: 2rem;
   font-weight: 600;
+`;
+
+export const PageText = styled.p`
+  hyphens: none;
+  color: var(--dark-electric-blue);
 `;

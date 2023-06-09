@@ -10,7 +10,12 @@ import muscleIcon from './assets/images/icon-muscle.svg';
 import pregnancyIcon from './assets/images/icon-pregnancy.svg';
 import raceIcon from './assets/images/icon-race.svg';
 import Styled from './App.styled';
-import { Container, LargeHeading } from './styles/Utils.styled';
+import {
+  Container,
+  LargeHeading,
+  MediumHeading,
+  PageText,
+} from './styles/Utils.styled';
 
 function App() {
   return (
@@ -34,58 +39,57 @@ function App() {
       </Container>
 
       <Styled.MainContent>
-        <section>
-          <Styled.AboutResults>
-            <div>
-              <img src={manEatingPhoto} alt="phot of man eating food" />
-            </div>
-            <Container>
-              <LargeHeading>What your BMI result means</LargeHeading>
-              <p>
-                A BMI range of 18.5 to 24.9 is considered a &#39;healthy
-                weight.&#39; Maintaining a healthy weight may lower your chances
-                of experiencing health issues later on, such as obesity and type
-                2 diabetes. Aim for a nutritious diet with reduced fat and sugar
-                content, incorporating ample fruits and vegetables.
-                Additionally, strive for regular physical activity, ideally
-                about 30 minutes daily for five days a week.
-              </p>
-            </Container>
-          </Styled.AboutResults>
+        <Styled.AboutResults>
+          <div>
+            <img src={manEatingPhoto} alt="phot of man eating food" />
+          </div>
+          <Container>
+            <LargeHeading>What your BMI result means</LargeHeading>
+            <PageText>
+              A BMI range of 18.5 to 24.9 is considered a &#39;healthy
+              weight.&#39; Maintaining a healthy weight may lower your chances
+              of experiencing health issues later on, such as obesity and type 2
+              diabetes. Aim for a nutritious diet with reduced fat and sugar
+              content, incorporating ample fruits and vegetables. Additionally,
+              strive for regular physical activity, ideally about 30 minutes
+              daily for five days a week.
+            </PageText>
 
-          <ul>
-            <li>
-              <div>
-                <img src={eatingIcon} alt="eating icon" />
-              </div>
-              <h3>Healthy Eating</h3>
-              <p>
-                Healthy eating promotes weight control, disease prevention,
-                better digestion, immunity, mental clarity, and mood.
-              </p>
-            </li>
-            <li>
-              <div>
-                <img src={exerciseIcon} alt="exercise icon" />
-              </div>
-              <h3>Regular Exercise</h3>
-              <p>
-                Exercise improves fitness, aids weight control, elevates mood,
-                and reduces disease risk, fostering wellness and longevity.
-              </p>
-            </li>
-            <li>
-              <div>
-                <img src={sleepIcon} alt="sleep icon" />
-              </div>
-              <h3>Adequate Sleep</h3>
-              <p>
-                Sleep enhances mental clarity, emotional stability, and physical
-                wellness, promoting overall restoration and rejuvenation.
-              </p>
-            </li>
-          </ul>
-        </section>
+            <ul>
+              <li>
+                <div>
+                  <img src={eatingIcon} alt="eating icon" />
+                </div>
+                <MediumHeading>Healthy eating</MediumHeading>
+                <PageText>
+                  Healthy eating promotes weight control, disease prevention,
+                  better digestion, immunity, mental clarity, and mood.
+                </PageText>
+              </li>
+              <li>
+                <div>
+                  <img src={exerciseIcon} alt="exercise icon" />
+                </div>
+                <MediumHeading>Regular exercise</MediumHeading>
+                <PageText>
+                  Exercise improves fitness, aids weight control, elevates mood,
+                  and reduces disease risk, fostering wellness and longevity.
+                </PageText>
+              </li>
+              <li>
+                <div>
+                  <img src={sleepIcon} alt="sleep icon" />
+                </div>
+                <MediumHeading>Adequate sleep</MediumHeading>
+                <PageText>
+                  Sleep enhances mental clarity, emotional stability, and
+                  physical wellness, promoting overall restoration and
+                  rejuvenation.
+                </PageText>
+              </li>
+            </ul>
+          </Container>
+        </Styled.AboutResults>
 
         <section>
           <div>

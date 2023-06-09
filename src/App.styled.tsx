@@ -1,5 +1,11 @@
 import styled from 'styled-components';
-import { Container, LargeHeading, MainHeading } from './styles/Utils.styled';
+import {
+  Container,
+  LargeHeading,
+  MainHeading,
+  MediumHeading,
+  PageText,
+} from './styles/Utils.styled';
 
 const App = styled.div``;
 
@@ -36,15 +42,34 @@ const AboutResults = styled.section`
     font-size: 3.2rem;
     letter-spacing: -0.05em;
     line-height: 110%;
+
+    & ~ ${PageText} {
+      margin-top: 3rem;
+    }
   }
 
   ${Container} {
     margin-block-start: 4.8rem;
   }
 
-  p {
-    margin-block-start: 3rem;
-    hyphens: none;
+  ul {
+    margin-block-start: 12.8rem;
+    margin-left: -0.5rem;
+
+    li {
+      ${MediumHeading} {
+        margin-block-start: 3rem;
+        letter-spacing: -0.05em;
+      }
+
+      ${PageText} {
+        margin-block-start: 1.8rem;
+      }
+
+      &:not(:last-of-type) {
+        margin-block-end: 4rem;
+      }
+    }
   }
 `;
 
