@@ -35,6 +35,10 @@ const Header = styled.header`
 
 const MainContent = styled.main`
   margin-block-start: 7.8rem;
+
+  /* & > *:not(:first-child) {
+    margin-block-start: 4.8rem;
+  } */
 `;
 
 const AboutResults = styled.section`
@@ -73,4 +77,28 @@ const AboutResults = styled.section`
   }
 `;
 
-export default { App, Header, HeadingOne, MainContent, AboutResults };
+const BMILimitations = styled.section`
+  margin-block-start: 12.9rem;
+  border: 1px solid red;
+  & ${LargeHeading} {
+    letter-spacing: -0.05em;
+    line-height: 110%;
+  }
+`;
+
+const BMILimitationsIntro = styled.div`
+  text-align: center;
+
+  p {
+    margin-block-start: 3rem;
+  }
+`;
+export default {
+  App,
+  Header,
+  HeadingOne,
+  MainContent,
+  AboutResults,
+  BMILimitations,
+  BMILimitationsIntro,
+};

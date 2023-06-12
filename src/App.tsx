@@ -91,85 +91,87 @@ function App() {
           </Container>
         </Styled.AboutResults>
 
-        <section>
-          <div>
-            <h2>Limitations of BMI</h2>
-            <p>
-              Although BMI is often a practical indicator of healthy weight, it
-              is not suited for every person. Specific groups should carefully
-              consider their BMI outcomes, and in certain cases, the measurement
-              may not be beneficial to use.
-            </p>
-          </div>
+        <Styled.BMILimitations>
+          <Container>
+            <Styled.BMILimitationsIntro>
+              <LargeHeading>Limitations of BMI</LargeHeading>
+              <PageText>
+                Although BMI is often a practical indicator of healthy weight,
+                it is not suited for every person. Specific groups should
+                carefully consider their BMI outcomes, and in certain cases, the
+                measurement may not be beneficial to use.
+              </PageText>
+            </Styled.BMILimitationsIntro>
 
-          <div>
             <div>
               <div>
-                <img src={genderIcon} alt="gender icon" />
+                <div>
+                  <img src={genderIcon} alt="gender icon" />
+                </div>
+                <h3>Gender</h3>
               </div>
-              <h3>Gender</h3>
+              <p>
+                The development and body fat composition of girls and boys vary
+                with age. Consequently, a child&#39;s age and gender are
+                considered when evaluating their BMI.
+              </p>
             </div>
-            <p>
-              The development and body fat composition of girls and boys vary
-              with age. Consequently, a child&#39;s age and gender are
-              considered when evaluating their BMI.
-            </p>
-          </div>
 
-          <div>
             <div>
               <div>
-                <img src={ageIcon} alt="age icon" />
+                <div>
+                  <img src={ageIcon} alt="age icon" />
+                </div>
+                <h3>Age</h3>
               </div>
-              <h3>Age</h3>
+              <p>
+                In aging individuals, increased body fat and muscle loss may
+                cause BMI to underestimate body fat content.
+              </p>
             </div>
-            <p>
-              In aging individuals, increased body fat and muscle loss may cause
-              BMI to underestimate body fat content.
-            </p>
-          </div>
 
-          <div>
             <div>
               <div>
-                <img src={muscleIcon} alt="muscle icon" />
+                <div>
+                  <img src={muscleIcon} alt="muscle icon" />
+                </div>
+                <h3>Muscle</h3>
               </div>
-              <h3>Muscle</h3>
+              <p>
+                BMI may misclassify muscular individuals as overweight or obese,
+                as it doesn&#39;t differentiate muscle from fat.
+              </p>
             </div>
-            <p>
-              BMI may misclassify muscular individuals as overweight or obese,
-              as it doesn&#39;t differentiate muscle from fat.
-            </p>
-          </div>
 
-          <div>
             <div>
               <div>
-                <img src={pregnancyIcon} alt="pregnancy icon" />
+                <div>
+                  <img src={pregnancyIcon} alt="pregnancy icon" />
+                </div>
+                <h3>Pregnancy</h3>
               </div>
-              <h3>Pregnancy</h3>
+              <p>
+                Expectant mothers experience weight gain due to their growing
+                baby. Maintaining a healthy pre-pregnancy BMI is advisable to
+                minimise health risks for both mother and child.
+              </p>
             </div>
-            <p>
-              Expectant mothers experience weight gain due to their growing
-              baby. Maintaining a healthy pre-pregnancy BMI is advisable to
-              minimise health risks for both mother and child.
-            </p>
-          </div>
 
-          <div>
             <div>
               <div>
-                <img src={raceIcon} alt="race icon" />
+                <div>
+                  <img src={raceIcon} alt="race icon" />
+                </div>
+                <h3>Race</h3>
               </div>
-              <h3>Race</h3>
+              <p>
+                Certain health concerns may affect individuals of some Black and
+                Asian origins at lower BMIs than others. To learn more, it is
+                advised to discuss this with your GP or practice nurse.
+              </p>
             </div>
-            <p>
-              Certain health concerns may affect individuals of some Black and
-              Asian origins at lower BMIs than others. To learn more, it is
-              advised to discuss this with your GP or practice nurse.
-            </p>
-          </div>
-        </section>
+          </Container>
+        </Styled.BMILimitations>
       </Styled.MainContent>
     </Styled.App>
   );
