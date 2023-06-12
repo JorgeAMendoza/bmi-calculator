@@ -104,47 +104,47 @@ function App() {
               </PageText>
             </Styled.BMILimitationsIntro>
 
-            <div>
+            <Styled.BMILimitationList>
               <LimitationCard icon={genderIcon} title="Gender">
-                <p>
+                <PageText>
                   The development and body fat composition of girls and boys
                   vary with age. Consequently, a child&#39;s age and gender are
                   considered when evaluating their BMI.
-                </p>
+                </PageText>
               </LimitationCard>
 
               <LimitationCard icon={ageIcon} title="Age">
-                <p>
+                <PageText>
                   The development and body fat composition of girls and boys
                   vary with age. Consequently, a child&#39;s age and gender are
                   considered when evaluating their BMI.
-                </p>
+                </PageText>
               </LimitationCard>
 
               <LimitationCard icon={muscleIcon} title="Muscle">
-                <p>
+                <PageText>
                   The development and body fat composition of girls and boys
                   vary with age. Consequently, a child&#39;s age and gender are
                   considered when evaluating their BMI.
-                </p>
+                </PageText>
               </LimitationCard>
 
               <LimitationCard icon={pregnancyIcon} title="Pregnancy">
-                <p>
+                <PageText>
                   The development and body fat composition of girls and boys
                   vary with age. Consequently, a child&#39;s age and gender are
                   considered when evaluating their BMI.
-                </p>
+                </PageText>
               </LimitationCard>
 
               <LimitationCard icon={raceIcon} title="Race">
-                <p>
+                <PageText>
                   The development and body fat composition of girls and boys
                   vary with age. Consequently, a child&#39;s age and gender are
                   considered when evaluating their BMI.
-                </p>
+                </PageText>
               </LimitationCard>
-            </div>
+            </Styled.BMILimitationList>
           </Container>
         </Styled.BMILimitations>
       </Styled.MainContent>

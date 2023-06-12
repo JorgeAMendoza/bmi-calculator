@@ -93,6 +93,14 @@ const BMILimitationsIntro = styled.div`
     margin-block-start: 3rem;
   }
 `;
+
+const BMILimitationList = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-block-start: 5.9rem;
+`;
+
 export default {
   App,
   Header,
@@ -101,4 +109,5 @@ export default {
   AboutResults,
   BMILimitations,
   BMILimitationsIntro,
+  BMILimitationList,
 };
