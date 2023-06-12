@@ -1,3 +1,6 @@
+import { SmallHeading } from '../../styles/Utils.styled';
+import Styled from './LimitationCard.styled';
+
 interface LimitationCardProps {
   icon: string;
   title: string;
@@ -6,14 +9,14 @@ interface LimitationCardProps {
 
 const LimitationCard = ({ icon, title, children }: LimitationCardProps) => {
   return (
-    <div>
-      <div>
+    <Styled.LimitationCard>
+      <Styled.Title>
         <img src={icon} alt={`icon for ${title}`} />
-        <h3>{title}</h3>
-      </div>
+        <SmallHeading>{title}</SmallHeading>
+      </Styled.Title>
 
       {children}
-    </div>
+    </Styled.LimitationCard>
   );
 };
 
