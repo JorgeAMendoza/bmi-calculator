@@ -16,6 +16,7 @@ import {
   MediumHeading,
   PageText,
 } from './styles/Utils.styled';
+import LimitationCard from './components/LimitationCard/LimitationCard';
 
 function App() {
   return (
@@ -104,71 +105,45 @@ function App() {
             </Styled.BMILimitationsIntro>
 
             <div>
-              <div>
-                <div>
-                  <img src={genderIcon} alt="gender icon" />
-                </div>
-                <h3>Gender</h3>
-              </div>
-              <p>
-                The development and body fat composition of girls and boys vary
-                with age. Consequently, a child&#39;s age and gender are
-                considered when evaluating their BMI.
-              </p>
-            </div>
+              <LimitationCard icon={genderIcon} title="Gender">
+                <p>
+                  The development and body fat composition of girls and boys
+                  vary with age. Consequently, a child&#39;s age and gender are
+                  considered when evaluating their BMI.
+                </p>
+              </LimitationCard>
 
-            <div>
-              <div>
-                <div>
-                  <img src={ageIcon} alt="age icon" />
-                </div>
-                <h3>Age</h3>
-              </div>
-              <p>
-                In aging individuals, increased body fat and muscle loss may
-                cause BMI to underestimate body fat content.
-              </p>
-            </div>
+              <LimitationCard icon={ageIcon} title="Age">
+                <p>
+                  The development and body fat composition of girls and boys
+                  vary with age. Consequently, a child&#39;s age and gender are
+                  considered when evaluating their BMI.
+                </p>
+              </LimitationCard>
 
-            <div>
-              <div>
-                <div>
-                  <img src={muscleIcon} alt="muscle icon" />
-                </div>
-                <h3>Muscle</h3>
-              </div>
-              <p>
-                BMI may misclassify muscular individuals as overweight or obese,
-                as it doesn&#39;t differentiate muscle from fat.
-              </p>
-            </div>
+              <LimitationCard icon={muscleIcon} title="Muscle">
+                <p>
+                  The development and body fat composition of girls and boys
+                  vary with age. Consequently, a child&#39;s age and gender are
+                  considered when evaluating their BMI.
+                </p>
+              </LimitationCard>
 
-            <div>
-              <div>
-                <div>
-                  <img src={pregnancyIcon} alt="pregnancy icon" />
-                </div>
-                <h3>Pregnancy</h3>
-              </div>
-              <p>
-                Expectant mothers experience weight gain due to their growing
-                baby. Maintaining a healthy pre-pregnancy BMI is advisable to
-                minimise health risks for both mother and child.
-              </p>
-            </div>
+              <LimitationCard icon={pregnancyIcon} title="Pregnancy">
+                <p>
+                  The development and body fat composition of girls and boys
+                  vary with age. Consequently, a child&#39;s age and gender are
+                  considered when evaluating their BMI.
+                </p>
+              </LimitationCard>
 
-            <div>
-              <div>
-                <div>
-                  <img src={raceIcon} alt="race icon" />
-                </div>
-                <h3>Race</h3>
-              </div>
-              <p>
-                Certain health concerns may affect individuals of some Black and
-                Asian origins at lower BMIs than others. To learn more, it is
-                advised to discuss this with your GP or practice nurse.
-              </p>
+              <LimitationCard icon={raceIcon} title="Race">
+                <p>
+                  The development and body fat composition of girls and boys
+                  vary with age. Consequently, a child&#39;s age and gender are
+                  considered when evaluating their BMI.
+                </p>
+              </LimitationCard>
             </div>
           </Container>
         </Styled.BMILimitations>
