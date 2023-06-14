@@ -79,7 +79,7 @@ const AboutResults = styled.section`
 
 const BMILimitations = styled.section`
   margin-block-start: 12.9rem;
-  border: 1px solid red;
+  margin-block-end: 10rem;
   & ${LargeHeading} {
     letter-spacing: -0.05em;
     line-height: 110%;
