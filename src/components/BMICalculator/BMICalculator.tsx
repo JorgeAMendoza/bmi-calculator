@@ -6,8 +6,8 @@ import Styled from './BMICalculator.styled';
 
 const initialState: CalculatorState = {
   unit: 'metric',
-  cm: '185',
-  kg: '80',
+  cm: '',
+  kg: '',
   feet: '',
   inches: '',
   lb: '',
