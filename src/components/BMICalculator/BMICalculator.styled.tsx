@@ -6,6 +6,8 @@ const BMICalculator = styled.form`
   text-align: left;
   background-color: var(--white);
   box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+  width: min(100%, 45rem);
+  margin: 0 auto;
 
   & > *:not(:last-child) {
     margin-bottom: 2.3rem;
