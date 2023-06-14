@@ -1,4 +1,5 @@
 import { Action, CalculatorState } from '../../reducer/bmi-reducer';
+import Styled from './RadioInput.styled';
 
 interface RadioInputProps {
   val: CalculatorState['unit'];
@@ -16,7 +17,8 @@ const RadioInput = ({
 }: RadioInputProps) => {
   return (
     <div>
-      <label data-cy={testId}>
+      <Styled.RadioLabel data-cy={testId}>
+        {name}
         <input
           type="radio"
           id={name}
@@ -26,8 +28,8 @@ const RadioInput = ({
           }}
           checked={val === name}
         />
-        {name}
-      </label>
+        <span></span>
+      </Styled.RadioLabel>
     </div>
   );
 };
