@@ -10,12 +10,6 @@ import device from './styles/device';
 
 const App = styled.div``;
 
-const HeadingOne = styled(MainHeading)`
-  --text-color: var(--gun-metal);
-  text-align: center;
-  letter-spacing: -0.05em;
-`;
-
 const Header = styled.header`
   padding-top: 3.3rem;
   text-align: center;
@@ -28,11 +22,42 @@ const Header = styled.header`
   & > *:not(:first-child) {
     margin-top: 2.4rem;
   }
+
+  @media screen and (${device.laptop}) {
+    text-align: left;
+    padding-top: 7.4rem;
+    div > img {
+      margin: 0;
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+  }
 `;
 
 const HeaderContent = styled.div`
   & > *:last-child {
     margin-top: 4.8rem;
+  }
+
+  ${MainHeading} {
+    --text-color: var(--gun-metal);
+    text-align: center;
+    letter-spacing: -0.05em;
+  }
+
+  @media screen and (${device.laptop}) {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    & > *:last-child {
+      margin: 0;
+    }
+
+    ${MainHeading} {
+      text-align: left;
+    }
   }
 `;
 
@@ -109,7 +134,6 @@ const BMILimitationList = styled.div`
 export default {
   App,
   Header,
-  HeadingOne,
   HeadingInfo,
   HeaderContent,
   MainContent,

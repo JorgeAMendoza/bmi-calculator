@@ -13,6 +13,7 @@ import Styled from './App.styled';
 import {
   Container,
   LargeHeading,
+  MainHeading,
   MediumHeading,
   PageText,
 } from './styles/Utils.styled';
@@ -29,7 +30,7 @@ function App() {
 
           <Styled.HeaderContent>
             <Styled.HeadingInfo>
-              <Styled.HeadingOne>Body Mass Index Calculator</Styled.HeadingOne>
+              <MainHeading>Body Mass Index Calculator</MainHeading>
               <PageText>
                 Better understand your weight in relation to your height using
                 our body mass index (BM) calculator. While BMI is not the sole
