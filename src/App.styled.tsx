@@ -6,6 +6,7 @@ import {
   MediumHeading,
   PageText,
 } from './styles/Utils.styled';
+import device from './styles/device';
 
 const App = styled.div``;
 
@@ -27,18 +28,22 @@ const Header = styled.header`
   & > *:not(:first-child) {
     margin-top: 2.4rem;
   }
+`;
 
+const HeaderContent = styled.div`
   & > *:last-child {
     margin-top: 4.8rem;
   }
 `;
 
+const HeadingInfo = styled.div`
+  & ${PageText} {
+    margin-top: 2.4rem;
+  }
+`;
+
 const MainContent = styled.main`
   margin-block-start: 7.8rem;
-
-  /* & > *:not(:first-child) {
-    margin-block-start: 4.8rem;
-  } */
 `;
 
 const AboutResults = styled.section`
@@ -105,6 +110,8 @@ export default {
   App,
   Header,
   HeadingOne,
+  HeadingInfo,
+  HeaderContent,
   MainContent,
   AboutResults,
   BMILimitations,
