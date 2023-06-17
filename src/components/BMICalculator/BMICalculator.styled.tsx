@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import device from '../../styles/device';
 
 const BMICalculator = styled.form`
   border-radius: 16px;
@@ -11,6 +12,11 @@ const BMICalculator = styled.form`
 
   & > *:not(:last-child) {
     margin-bottom: 2.3rem;
+  }
+
+  @media screen and (${device.laptop}) {
+    width: 100%;
+    flex: 1 1 167rem;
   }
 `;
 
@@ -37,6 +43,10 @@ const FormInput = styled.div`
 
   & > *:not(:last-child) {
     margin-block-end: 1.5rem;
+  }
+
+  @media screen and (${device.laptop}) {
+    display: flex;
   }
 `;
 
