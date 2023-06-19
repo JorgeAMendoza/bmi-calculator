@@ -49,10 +49,18 @@ const HeaderContent = styled.div`
     border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
 
     & > *:last-child {
       margin: 0;
+      margin-top: 1.6rem;
+    }
+
+    & > * {
+      width: 50%;
+    }
+
+    & > *:last-child {
+      width: 48.5%;
     }
 
     ${MainHeading} {
@@ -64,6 +72,19 @@ const HeaderContent = styled.div`
 const HeadingInfo = styled.div`
   & ${PageText} {
     margin-top: 2.4rem;
+  }
+
+  @media screen and (${device.laptop}) {
+    margin-block-start: 10.5rem;
+
+    & ${MainHeading} {
+      width: 80%;
+    }
+
+    & ${PageText} {
+      width: 81%;
+      margin-top: 3.4rem;
+    }
   }
 `;
 
