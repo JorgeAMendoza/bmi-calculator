@@ -16,7 +16,11 @@ const BMICalculator = styled.form`
 
   @media screen and (${device.laptop}) {
     width: 100%;
-    flex: 1 1 167rem;
+    padding: 1.9em;
+
+    & > *:not(:last-child) {
+      margin-bottom: 3.4rem;
+    }
   }
 `;
 
@@ -30,6 +34,10 @@ const CalculatorTitle = styled.h2`
 const UnitSelect = styled.div`
   display: flex;
   gap: 5.1rem;
+
+  @media screen and (${device.laptop}) {
+    gap: 15.9rem;
+  }
 `;
 
 const InputTitle = styled.p`
@@ -47,6 +55,7 @@ const FormInput = styled.div`
 
   @media screen and (${device.laptop}) {
     display: flex;
+    gap: 2.6rem;
   }
 `;
 
@@ -63,6 +72,12 @@ const Result = styled.div`
   padding: 2em;
   color: var(--white);
   border-radius: 16px;
+  margin-top: -1.6rem;
+
+  @media screen and (${device.laptop}) {
+    border-radius: 10px 60px 60px 10px;
+    padding: 1.8em 2em;
+  }
 `;
 
 const BMIResult = styled.div`
@@ -82,12 +97,19 @@ const WelcomeMessage = styled.div`
   p {
     font-size: 2.4rem;
     font-weight: 600;
+    letter-spacing: -0.05em;
   }
 
   p:last-of-type {
     font-weight: 400;
     font-size: 1.4rem;
     letter-spacing: default;
+  }
+
+  @media screen and (${device.laptop}) {
+    p:last-of-type {
+      padding-top: 1.2rem;
+    }
   }
 `;
 
