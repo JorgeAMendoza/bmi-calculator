@@ -13,7 +13,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const LargeHeading = styled.h2`
-  font-size: clamp(3.2rem, 5vw + 1rem, 4.8rem);
+  font-size: clamp(3.2rem, 2.8vw + 1rem, 4.8rem);
   font-weight: 600;
 `;
 

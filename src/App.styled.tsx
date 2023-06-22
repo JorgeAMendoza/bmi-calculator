@@ -93,7 +93,6 @@ const MainContent = styled.main`
 
 const AboutResults = styled.section`
   ${LargeHeading} {
-    font-size: 3.2rem;
     letter-spacing: -0.05em;
     line-height: 110%;
 
