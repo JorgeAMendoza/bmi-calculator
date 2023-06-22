@@ -75,7 +75,7 @@ const Result = styled.div`
   margin-top: -1.6rem;
 
   @media screen and (${device.laptop}) {
-    border-radius: 10px 60px 60px 10px;
+    border-radius: 10px 150px 150px 10px;
     padding: 1.8em 2em;
   }
 `;
@@ -90,6 +90,24 @@ const BMIResult = styled.div`
     font-weight: 400;
     font-size: 1.4rem;
     padding-top: 1.2rem;
+  }
+
+  @media screen and (${device.laptop}) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p > span {
+      font-size: 6.4rem;
+      line-height: 1.4;
+    }
+
+    p:last-of-type {
+      text-align: left;
+      width: 50%;
+      padding: 0;
+      padding-left: 1.2rem;
+    }
   }
 `;
 

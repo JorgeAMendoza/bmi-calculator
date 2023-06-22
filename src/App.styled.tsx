@@ -46,7 +46,6 @@ const HeaderContent = styled.div`
   }
 
   @media screen and (${device.laptop}) {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
 
