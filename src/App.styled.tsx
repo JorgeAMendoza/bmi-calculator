@@ -127,6 +127,28 @@ const AboutResults = styled.section`
   }
 `;
 
+const AboutImageMobile = styled.img`
+  @media screen and (${device.laptop}) {
+    display: none;
+  }
+`;
+
+const AboutImageDesktop = styled.div`
+  display: none;
+
+  @media screen and (${device.laptop}) {
+    display: block;
+  }
+`;
+
+const AboutResultsInfo = styled.div`
+  @media screen and (${device.laptop}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+`;
+
 const BMILimitations = styled.section`
   margin-block-start: 12.9rem;
   margin-block-end: 10rem;
@@ -158,6 +180,9 @@ export default {
   HeaderContent,
   MainContent,
   AboutResults,
+  AboutImageMobile,
+  AboutImageDesktop,
+  AboutResultsInfo,
   BMILimitations,
   BMILimitationsIntro,
   BMILimitationList,
