@@ -89,6 +89,10 @@ const HeadingInfo = styled.div`
 
 const MainContent = styled.main`
   margin-block-start: 7.8rem;
+
+  @media screen and (${device.laptop}) {
+    margin-block-start: 18rem;
+  }
 `;
 
 const AboutResults = styled.section`
@@ -142,9 +146,23 @@ const AboutImageDesktop = styled.div`
 
 const AboutResultsInfo = styled.div`
   @media screen and (${device.laptop}) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: end;
+    display: flex;
+
+    & > * {
+      width: 50%;
+    }
+
+    & > *:first-child {
+      width: 48.5%;
+    }
+
+    /* text information */
+    & > *:last-child {
+      width: 40%;
+      align-self: end;
+      margin-left: 13.2rem;
+      margin-bottom: 4.4rem;
+    }
   }
 `;
 
