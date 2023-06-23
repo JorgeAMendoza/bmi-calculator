@@ -120,11 +120,27 @@ const AboutResults = styled.section`
       }
 
       ${PageText} {
-        margin-block-start: 1.8rem;
+        margin-block-start: 1.9rem;
       }
 
       &:not(:last-of-type) {
         margin-block-end: 4rem;
+      }
+    }
+  }
+
+  @media screen and (${device.laptop}) {
+    ul {
+      display: grid;
+      margin-block-start: 16.6rem;
+      margin-left: 0;
+      grid-template-columns: repeat(auto-fill, minmax(36.5rem, 1fr));
+      gap: 3rem;
+
+      li {
+        ${MediumHeading} {
+          margin-block-start: 4.2rem;
+        }
       }
     }
   }
