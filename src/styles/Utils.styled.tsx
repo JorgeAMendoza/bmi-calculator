@@ -18,7 +18,7 @@ export const LargeHeading = styled.h2`
 `;
 
 export const MediumHeading = styled.h3`
-  font-size: clamp(2.4rem, 3.5vw + 1rem, 3.2rem);
+  font-size: 2.4rem;
   font-weight: 600;
 `;
 
