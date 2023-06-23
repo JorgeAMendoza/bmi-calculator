@@ -182,6 +182,18 @@ const AboutResultsInfo = styled.div`
   }
 `;
 
+const BMILimitationsIntro = styled.div`
+  text-align: center;
+
+  p {
+    margin-block-start: 3rem;
+  }
+
+  @media screen and (${device.laptop}) {
+    text-align: left;
+  }
+`;
+
 const BMILimitations = styled.section`
   margin-block-start: 12.9rem;
   margin-block-end: 10rem;
@@ -189,13 +201,19 @@ const BMILimitations = styled.section`
     letter-spacing: -0.05em;
     line-height: 110%;
   }
-`;
 
-const BMILimitationsIntro = styled.div`
-  text-align: center;
+  @media screen and (${device.laptop}) {
+    margin-block-start: 17.9rem;
 
-  p {
-    margin-block-start: 3rem;
+    ${Container} {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+    }
+
+    ${BMILimitationsIntro} {
+      grid-column: 1 / span 6;
+    }
   }
 `;
 
