@@ -72,11 +72,11 @@ const Result = styled.div`
   padding: 2em;
   color: var(--white);
   border-radius: 16px;
-  margin-top: -1.6rem;
 
   @media screen and (${device.laptop}) {
     border-radius: 10px 150px 150px 10px;
     padding: 1.8em 2em;
+    margin-top: -1.6rem;
   }
 `;
 
