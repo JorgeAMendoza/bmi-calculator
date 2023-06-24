@@ -118,45 +118,43 @@ function App() {
               </PageText>
             </Styled.BMILimitationsIntro>
 
-            <Styled.BMILimitationList>
-              <LimitationCard icon={genderIcon} title="Gender">
-                <PageText>
-                  The development and body fat composition of girls and boys
-                  vary with age. Consequently, a child&#39;s age and gender are
-                  considered when evaluating their BMI.
-                </PageText>
-              </LimitationCard>
+            <LimitationCard icon={genderIcon} title="Gender">
+              <PageText>
+                The development and body fat composition of girls and boys vary
+                with age. Consequently, a child&#39;s age and gender are
+                considered when evaluating their BMI.
+              </PageText>
+            </LimitationCard>
 
-              <LimitationCard icon={ageIcon} title="Age">
-                <PageText>
-                  In aging individuals, increased body fat and muscle loss may
-                  cause BMI to underestimate body fat content.
-                </PageText>
-              </LimitationCard>
+            <LimitationCard icon={ageIcon} title="Age">
+              <PageText>
+                In aging individuals, increased body fat and muscle loss may
+                cause BMI to underestimate body fat content.
+              </PageText>
+            </LimitationCard>
 
-              <LimitationCard icon={muscleIcon} title="Muscle">
-                <PageText>
-                  BMI may misclassify muscular individuals as overweight or
-                  obese, as it doesn&#39;t differentiate muscle from fat.
-                </PageText>
-              </LimitationCard>
+            <LimitationCard icon={muscleIcon} title="Muscle">
+              <PageText>
+                BMI may misclassify muscular individuals as overweight or obese,
+                as it doesn&#39;t differentiate muscle from fat.
+              </PageText>
+            </LimitationCard>
 
-              <LimitationCard icon={pregnancyIcon} title="Pregnancy">
-                <PageText>
-                  Expectant mothers experience weight gain due to their growing
-                  baby. Maintaining a healthy pre-pregnancy BMI is advisable to
-                  minimise health risks for both mother and child.
-                </PageText>
-              </LimitationCard>
+            <LimitationCard icon={pregnancyIcon} title="Pregnancy">
+              <PageText>
+                Expectant mothers experience weight gain due to their growing
+                baby. Maintaining a healthy pre-pregnancy BMI is advisable to
+                minimise health risks for both mother and child.
+              </PageText>
+            </LimitationCard>
 
-              <LimitationCard icon={raceIcon} title="Race">
-                <PageText>
-                  Certain health concerns may affect individuals of some Black
-                  and Asian origins at lower BMIs than others. To learn more, it
-                  is advised to discuss this with your GP or practice nurse.
-                </PageText>
-              </LimitationCard>
-            </Styled.BMILimitationList>
+            <LimitationCard icon={raceIcon} title="Race">
+              <PageText>
+                Certain health concerns may affect individuals of some Black and
+                Asian origins at lower BMIs than others. To learn more, it is
+                advised to discuss this with your GP or practice nurse.
+              </PageText>
+            </LimitationCard>
           </Container>
         </Styled.BMILimitations>
       </Styled.MainContent>

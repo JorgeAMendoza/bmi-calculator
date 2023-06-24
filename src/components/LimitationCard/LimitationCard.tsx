@@ -9,7 +9,7 @@ interface LimitationCardProps {
 
 const LimitationCard = ({ icon, title, children }: LimitationCardProps) => {
   return (
-    <Styled.LimitationCard>
+    <Styled.LimitationCard data-limitation={title.toLowerCase()}>
       <Styled.Title>
         <img src={icon} alt={`icon for ${title}`} />
         <SmallHeading>{title}</SmallHeading>

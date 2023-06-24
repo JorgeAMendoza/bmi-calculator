@@ -10,6 +10,14 @@ const LimitationCard = styled.div`
   & ${SmallHeading} {
     letter-spacing: -0.05em;
   }
+
+  &[data-limitation='gender'] {
+    margin-block-start: 5.8rem;
+  }
+
+  &:not([data-limitation='race']) {
+    margin-block-end: 1.7rem;
+  }
 `;
 
 const Title = styled.div`

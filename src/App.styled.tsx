@@ -182,6 +182,7 @@ const AboutResultsInfo = styled.div`
   }
 `;
 
+// BMI Limitations
 const BMILimitationsIntro = styled.div`
   text-align: center;
 
@@ -217,13 +218,6 @@ const BMILimitations = styled.section`
   }
 `;
 
-const BMILimitationList = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-block-start: 5.9rem;
-`;
-
 export default {
   App,
   Header,
@@ -236,5 +230,4 @@ export default {
   AboutResultsInfo,
   BMILimitations,
   BMILimitationsIntro,
-  BMILimitationList,
 };
