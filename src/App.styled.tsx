@@ -8,7 +8,16 @@ import {
 } from './styles/Utils.styled';
 import device from './styles/device';
 
-const App = styled.div``;
+// Utils
+const CurvedLine = styled.img`
+  position: absolute;
+  width: auto;
+  display: none;
+
+  @media screen and (${device.laptop}) {
+    display: block;
+  }
+`;
 
 const Header = styled.header`
   padding-top: 3.3rem;
@@ -94,8 +103,16 @@ const MainContent = styled.main`
     margin-block-start: 18rem;
   }
 `;
+// About BMI Results Section
 
 const AboutResults = styled.section`
+  position: relative;
+
+  ${CurvedLine} {
+    right: 16.9rem;
+    top: -5.3rem;
+  }
+
   ${LargeHeading} {
     letter-spacing: -0.05em;
     line-height: 110%;
@@ -198,6 +215,13 @@ const BMILimitationsIntro = styled.div`
 const BMILimitations = styled.section`
   margin-block-start: 12.9rem;
   margin-block-end: 10rem;
+  position: relative;
+
+  ${CurvedLine} {
+    top: 25rem;
+    left: 30.5rem;
+  }
+
   & ${LargeHeading} {
     letter-spacing: -0.05em;
     line-height: 110%;
@@ -220,11 +244,11 @@ const BMILimitations = styled.section`
 `;
 
 export default {
-  App,
   Header,
   HeadingInfo,
   HeaderContent,
   MainContent,
+  CurvedLine,
   AboutResults,
   AboutImageMobile,
   AboutImageDesktop,

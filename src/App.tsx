@@ -1,15 +1,18 @@
-import bmiLogo from './assets/images/logo.svg';
-import BmiCalculator from './components/BMICalculator/BMICalculator';
-import manEatingPhoto from './assets/images/image-man-eating.webp';
-import sleepIcon from './assets/images/icon-sleep.svg';
+import Styled from './App.styled';
+import ageIcon from './assets/images/icon-age.svg';
 import eatingIcon from './assets/images/icon-eating.svg';
 import exerciseIcon from './assets/images/icon-exercise.svg';
 import genderIcon from './assets/images/icon-gender.svg';
-import ageIcon from './assets/images/icon-age.svg';
 import muscleIcon from './assets/images/icon-muscle.svg';
 import pregnancyIcon from './assets/images/icon-pregnancy.svg';
 import raceIcon from './assets/images/icon-race.svg';
-import Styled from './App.styled';
+import sleepIcon from './assets/images/icon-sleep.svg';
+import manEatingPhoto from './assets/images/image-man-eating.webp';
+import bmiLogo from './assets/images/logo.svg';
+import curvedLineLeft from './assets/images/pattern-curved-line-left.svg';
+import curvedLineRight from './assets/images/pattern-curved-line-right.svg';
+import BmiCalculator from './components/BMICalculator/BMICalculator';
+import LimitationCard from './components/LimitationCard/LimitationCard';
 import {
   Container,
   LargeHeading,
@@ -17,11 +20,10 @@ import {
   MediumHeading,
   PageText,
 } from './styles/Utils.styled';
-import LimitationCard from './components/LimitationCard/LimitationCard';
 
 function App() {
   return (
-    <Styled.App>
+    <div>
       <Container>
         <Styled.Header>
           <div>
@@ -46,6 +48,7 @@ function App() {
 
       <Styled.MainContent>
         <Styled.AboutResults>
+          <Styled.CurvedLine src={curvedLineLeft} alt="" />
           <Styled.AboutImageMobile
             src={manEatingPhoto}
             alt="phot of man eating food"
@@ -107,6 +110,7 @@ function App() {
         </Styled.AboutResults>
 
         <Styled.BMILimitations>
+          <Styled.CurvedLine src={curvedLineRight} alt="" />
           <Container>
             <Styled.BMILimitationsIntro>
               <LargeHeading>Limitations of BMI</LargeHeading>
@@ -158,7 +162,7 @@ function App() {
           </Container>
         </Styled.BMILimitations>
       </Styled.MainContent>
-    </Styled.App>
+    </div>
   );
 }
 
