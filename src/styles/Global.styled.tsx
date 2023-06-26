@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import InterFont from '../assets/fonts/Inter-VariableFont_slnt,wght.ttf';
+import device from './device';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -42,9 +43,9 @@ const GlobalStyle = createGlobalStyle`
     position:absolute;
     top:0;
     left:0;
-    width:100%;
+    width: min(100%, calc(50vw + 28rem));
     height: 96vh;
-    height:96svh;
+    height:min(97svh, 73.7rem);
     z-index: -2;
     background: linear-gradient(270deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
     border-radius: 0px 0px 35px 35px;

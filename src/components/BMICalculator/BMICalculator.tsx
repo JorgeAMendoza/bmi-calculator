@@ -131,7 +131,7 @@ const BMICalculator = () => {
           </Styled.BMIResult>
         ) : (
           <Styled.WelcomeMessage>
-            <p>Welcome</p>
+            <p>Welcome!</p>
             <p>
               Enter your height and weight and you&#39;ll see your BMI result
               here

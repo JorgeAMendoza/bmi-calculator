@@ -13,12 +13,12 @@ export const MainHeading = styled.h1`
 `;
 
 export const LargeHeading = styled.h2`
-  font-size: clamp(3.2rem, 5vw + 1rem, 4.8rem);
+  font-size: clamp(3.2rem, 2.8vw + 1rem, 4.8rem);
   font-weight: 600;
 `;
 
 export const MediumHeading = styled.h3`
-  font-size: clamp(2.4rem, 3.5vw + 1rem, 3.2rem);
+  font-size: 2.4rem;
   font-weight: 600;
 `;
 
