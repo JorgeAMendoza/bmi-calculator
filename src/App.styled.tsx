@@ -208,12 +208,13 @@ const BMILimitations = styled.section`
 
     ${Container} {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-rows: auto;
+      gap: 2.9rem;
     }
 
     ${BMILimitationsIntro} {
-      grid-column: 1 / span 6;
+      grid-column: 1 / 7;
     }
   }
 `;
