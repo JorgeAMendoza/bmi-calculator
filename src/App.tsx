@@ -48,13 +48,13 @@ function App() {
 
       <Styled.MainContent>
         <Styled.AboutResults>
-          <Styled.CurvedLine src={curvedLineLeft} alt="" />
           <Styled.AboutImageMobile
             src={manEatingPhoto}
             alt="phot of man eating food"
           />
 
           <Container>
+            <Styled.CurvedLine src={curvedLineLeft} alt="" />
             <Styled.AboutResultsInfo>
               <Styled.AboutImageDesktop>
                 <img src={manEatingPhoto} alt="phot of man eating food" />
@@ -110,8 +110,8 @@ function App() {
         </Styled.AboutResults>
 
         <Styled.BMILimitations>
-          <Styled.CurvedLine src={curvedLineRight} alt="" />
           <Container>
+            <Styled.CurvedLine src={curvedLineRight} alt="" />
             <Styled.BMILimitationsIntro>
               <LargeHeading>Limitations of BMI</LargeHeading>
               <PageText>

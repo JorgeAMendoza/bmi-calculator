@@ -13,6 +13,7 @@ const CurvedLine = styled.img`
   position: absolute;
   width: auto;
   display: none;
+  z-index: -1;
 
   @media screen and (${device.laptop}) {
     display: block;
@@ -109,7 +110,7 @@ const AboutResults = styled.section`
   position: relative;
 
   ${CurvedLine} {
-    right: 16.9rem;
+    right: 2.5rem;
     top: -5.3rem;
   }
 
@@ -124,6 +125,7 @@ const AboutResults = styled.section`
 
   ${Container} {
     margin-block-start: 4.8rem;
+    position: relative;
   }
 
   ul {
@@ -215,11 +217,10 @@ const BMILimitationsIntro = styled.div`
 const BMILimitations = styled.section`
   margin-block-start: 12.9rem;
   margin-block-end: 10rem;
-  position: relative;
 
   ${CurvedLine} {
     top: 25rem;
-    left: 30.5rem;
+    left: 16.5rem;
   }
 
   & ${LargeHeading} {
@@ -235,6 +236,7 @@ const BMILimitations = styled.section`
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-rows: auto;
       gap: 2.9rem;
+      position: relative;
     }
 
     ${BMILimitationsIntro} {
