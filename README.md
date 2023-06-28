@@ -1,5 +1,7 @@
 # BMI Calculator
 
+<div align="center"><img src="./bmi-showcase.gif" width=800 alt="gif of desktop preview of the bmi calculator"></div>
+
 Design, assets, and requirements provided thanks to [FrontEndMentor](https://www.frontendmentor.io/challenges/body-mass-index-calculator-brrBkfSz1T)
 
 The project requirement is to create a working BMI calculator that returns the results in either metric or imperial form depending on user preference. The rest of the page includes an explanation of the results, attributes that effect a BMI result, and the limitations of using BMI as a health indicator.
