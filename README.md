@@ -417,3 +417,9 @@ const HeadingInfo = styled.div`
 ```
 
 `PageText` and `MainHeading` are nested within the styled component above and are styled accordingly.
+
+## Conclusion
+
+Overall this project was a good learning experience, I got a better idea on how to re-use styled components and obtained a better understanding of using the Vitest test runner. If you have any feedback please let me know and feel free to fork the repository and make any changes you see fit.
+
+Thanks for reading!
