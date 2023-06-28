@@ -76,6 +76,8 @@ const reducer = (state: CalculatorState, action: Action): CalculatorState => {
         };
 
         const bmi = calculateBmi(info);
+        if (Number(bmi.bmi) > 100) return state;
+
         return { ...state, bmiInfo: bmi };
       }
 
@@ -99,6 +101,8 @@ const reducer = (state: CalculatorState, action: Action): CalculatorState => {
       };
 
       const bmi = calculateBmi(info);
+      if (Number(bmi.bmi) > 100) return state;
+
       return { ...state, bmiInfo: bmi };
     }
     default:
