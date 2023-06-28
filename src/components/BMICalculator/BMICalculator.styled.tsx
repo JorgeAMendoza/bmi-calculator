@@ -59,6 +59,17 @@ const FormInput = styled.div`
   }
 `;
 
+const FormInputMetric = styled(FormInput)`
+  @media screen and (${device.laptop}) {
+    display: flex;
+    flex-direction: column;
+
+    & > *:not(:last-child) {
+      margin-block-end: 0rem;
+    }
+  }
+`;
+
 const InputArea = styled.div`
   display: flex;
   gap: 1.6rem;
@@ -76,7 +87,7 @@ const Result = styled.div`
   @media screen and (${device.laptop}) {
     border-radius: 10px 150px 150px 10px;
     padding: 1.8em 2em;
-    margin-top: -1.6rem;
+    margin-top: -1.4rem;
   }
 `;
 
@@ -136,6 +147,7 @@ export default {
   CalculatorTitle,
   UnitSelect,
   FormInput,
+  FormInputMetric,
   InputArea,
   Result,
   WelcomeMessage,

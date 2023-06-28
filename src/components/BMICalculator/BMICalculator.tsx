@@ -75,7 +75,7 @@ const BMICalculator = () => {
           </div>
         </Styled.FormInput>
       ) : (
-        <Styled.FormInput>
+        <Styled.FormInputMetric>
           {/* height */}
           <div>
             <Styled.InputTitle>height</Styled.InputTitle>
@@ -117,7 +117,7 @@ const BMICalculator = () => {
               />
             </Styled.InputArea>
           </div>
-        </Styled.FormInput>
+        </Styled.FormInputMetric>
       )}
 
       <Styled.Result aria-live="polite">
