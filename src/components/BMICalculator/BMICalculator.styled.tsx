@@ -38,6 +38,7 @@ const UnitSelect = styled.div`
 
   @media screen and (${device.laptop}) {
     gap: 15.9rem;
+    flex-wrap: nowrap;
   }
 `;
 
