@@ -299,7 +299,121 @@ describe('calculate-bmi for metric information', () => {
     );
     ...
   });
-};
+});
 ```
 
+A set of information is passed into the function, and the test asserts that the correct value and message is returned.
 
+#### Cypress
+
+An excerpt of a test from [`calculate-bmi.cy.ts`](./cypress/e2e/calculate-bmi.cy.ts) can be seen below:
+
+```typescript
+describe('calculate-bmi for metric information', () => {
+  beforeEach(() => {
+    cy.visit('/');
+    cy.get('[data-cy="metricSelect"]').as('metricSelect');
+    cy.get('[data-cy="imperialSelect"]').as('imperialSelect');
+    cy.get('[data-cy="cmInput"]').as('cmInput');
+    cy.get('[data-cy="kgInput"]').as('kgInput');
+  });
+
+  it('metric is selected by default, no results displayed', () => {
+    cy.get('@metricSelect').find('input').should('be.checked');
+    cy.get('@imperialSelect').find('input').should('not.be.checked');
+    cy.get('[data-cy="bmiScore"]').should('not.exist');
+  });
+
+  it('height of 185, weight of 80, displays  23.4', () => {
+    cy.get('@cmInput').find('input').type('185');
+    cy.get('@kgInput').find('input').type('80');
+    cy.get('[data-cy="bmiScore"]').should('have.text', '23.4');
+    cy.get('[data-cy="bmiResultText"]').should(
+      'have.text',
+      "Your BMI suggests you're a healthy weight. Your ideal weight is between 63.3kgs - 85.2kgs."
+    );
+  });
+
+  ...
+});
+```
+
+Before each test, the test runner will visit the page, select the unit inputs and the weight and height inputs for the metric form. The first test asserts that the metric unit is selected by default with no results displayed; the second test asserts that the correct BMI score and message is rendered with the given input.
+
+### Styling
+
+With this project, I wanted to focus on creating styled components that could be used multiple times around the page. See an excrept from [`Utils.styled.tsx`](./src/styles/Utils.styled.tsx) below:
+
+```typescript
+export const Container = styled.div`
+  width: min(87%, 116rem);
+  margin: 0 auto;
+`;
+
+export const MainHeading = styled.h1`
+  font-size: clamp(4.8rem, 5vw + 1rem, 6.4rem);
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--text-color);
+`;
+
+export const LargeHeading = styled.h2`
+  font-size: clamp(3.2rem, 2.8vw + 1rem, 4.8rem);
+  font-weight: 600;
+`;
+
+export const MediumHeading = styled.h3`
+  font-size: 2.4rem;
+  font-weight: 600;
+`;
+```
+
+Multiple heading elements were created to be used in the application, along with a container component to wrap page content. So instead of creating specific _heading_ components for each section, these components can be used instead. See an example below from [`App.tsx`](./src/App.tsx):
+
+```typescript
+<Container>
+  <Styled.CurvedLine src={curvedLineLeft} alt="" />
+  <Styled.AboutResultsInfo>
+    <Styled.AboutImageDesktop>
+      <img src={manEatingPhoto} alt="phot of man eating food" />
+    </Styled.AboutImageDesktop>
+    <div>
+      <LargeHeading>What your BMI result means</LargeHeading>
+      <PageText>
+        A BMI range of 18.5 to 24.9 is considered a &#39;healthy weight.&#39;
+        Maintaining a healthy weight may lower your chances of experiencing
+        health issues later on, such as obesity and type 2 diabetes. Aim for a
+        nutritious diet with reduced fat and sugar content, incorporating ample
+        fruits and vegetables. Additionally, strive for regular physical
+        activity, ideally about 30 minutes daily for five days a week.
+      </PageText>
+    </div>
+  </Styled.AboutResultsInfo>
+  ...
+</Container>
+```
+
+If a specific style needs to be applied to the heading or container, nested CSS can be used to select the component without effecting other instances of it. From [`App.styled.tsx`](./src/App.styled.tsx):
+
+```typescript
+const HeadingInfo = styled.div`
+  & ${PageText} {
+    margin-top: 2.4rem;
+  }
+
+  @media screen and (${device.laptop}) {
+    margin-block-start: 10.5rem;
+
+    & ${MainHeading} {
+      width: 80%;
+    }
+
+    & ${PageText} {
+      width: 81%;
+      margin-top: 3.4rem;
+    }
+  }
+`;
+```
+
+`PageText` and `MainHeading` are nested within the styled component above and are styled accordingly.
