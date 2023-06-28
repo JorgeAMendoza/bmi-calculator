@@ -34,6 +34,7 @@ const CalculatorTitle = styled.h2`
 const UnitSelect = styled.div`
   display: flex;
   gap: 5.1rem;
+  flex-wrap: wrap;
 
   @media screen and (${device.laptop}) {
     gap: 15.9rem;
