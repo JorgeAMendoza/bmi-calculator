@@ -1,4 +1,4 @@
-Name: Production Push/Pull
+name: Production Push/Pull
 
 on:
   push:
