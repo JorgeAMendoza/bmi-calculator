@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import InterFont from '../assets/fonts/Inter-VariableFont_slnt,wght.ttf';
-import device from './device';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
