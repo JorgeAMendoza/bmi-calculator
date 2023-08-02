@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const InputContainer = styled.div`
-  outline: 1px solid var(--borders);
+  border: 1px solid var(--borders);
   border-radius: 12px;
   height: 6.9rem;
 `;
@@ -24,6 +24,7 @@ const Input = styled.input`
   font-size: 2.4rem;
   font-weight: bold;
   color: var(--gun-metal);
+  outline: transparent;
 `;
 
 export default { InputContainer, Input, InputLabel };
