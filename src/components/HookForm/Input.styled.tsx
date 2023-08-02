@@ -24,6 +24,7 @@ const Input = styled.input`
   font-size: 2.4rem;
   font-weight: bold;
   color: var(--gun-metal);
+  outline: transparent;
 `;
 
 export default { InputContainer, Input, InputLabel };
