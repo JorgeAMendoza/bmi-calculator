@@ -22,7 +22,7 @@ const RadioLabel = styled.label`
     top: -1px;
     left: 2px;
     padding: 0.9em;
-    outline: 1px solid var(--borders);
+    border: 1px solid var(--borders);
     border-radius: 50%;
   }
 
